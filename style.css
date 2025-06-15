@@ -116,34 +116,42 @@ body {
 }
 
 @media (max-width: 425px) {
-  /* Make the to‑do area static and centered */
-  .todo-area {
-    position: static;        /* no absolute positioning */
-    transform: none;         /* remove translateX */
-    width: 90%;              /* almost full‑width */
-    max-width: 420px;        /* still cap at 420px */
-    margin: 20px auto 40px;  /* top & bottom spacing, center horizontally */
-    background: rgba(255,255,255,0.9);
+  /* push the To‑Do below the header/image */
+  body {
+    padding-top: 200px;        /* adjust this so the list clears your top image/header */
   }
 
-  /* Inputs and buttons fill the new container */
+  .todo-area {
+    position: static !important;   /* remove absolute positioning */
+    margin: 0 auto;                /* center horizontally */
+    width: 90%;                    /* fill most of the screen */
+    max-width: 420px;              /* but never exceed 420px */
+    background: rgba(255,255,255,0.9);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+  }
+
+  /* reflow the input row */
   .input-area {
-    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   #task-input {
-    flex: 1;
+    flex: 1 1 100%;
+    margin-bottom: 8px;
     font-size: 14px;
     padding: 8px;
   }
 
   #add-task {
-    padding: 8px 12px;
+    flex: 1 1 auto;
+    width: auto;
     font-size: 18px;
-    margin-left: 8px;
+    padding: 8px 12px;
   }
 
-  /* Task items adjust nicely */
+  /* shrink task items a bit */
   .task-item {
     padding: 8px 10px;
     font-size: 14px;
@@ -159,6 +167,7 @@ body {
     margin-left: 6px;
   }
 }
+
 
 
 
