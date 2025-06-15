@@ -72,3 +72,47 @@ body {
   transform: scale(1.2);
 }
 
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .todo-area {
+    top: auto;              /* let it flow from document flow */
+    bottom: 20px;           /* pad from the bottom */
+    left: 50%;              /* center horizontally */
+    right: auto;
+    transform: translateX(-50%);
+    width: 90%;             /* almost full‑width */
+    padding: 15px;
+  }
+
+  #task-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #add-task {
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+
+  .task-item {
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .task-checkbox {
+    transform: scale(1.1);
+    margin-right: 8px;
+  }
+
+  .task-item span {
+    font-size: 14px;
+  }
+
+  .task-item button {
+    font-size: 18px;
+    margin-left: 8px;
+  }
+}
+
+
