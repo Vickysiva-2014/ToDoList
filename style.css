@@ -115,4 +115,40 @@ body {
   }
 }
 
+/* Override for very small screens */
+@media (max-width: 425px) {
+  .todo-area {
+    bottom: 10px;           /* bring it up a bit */
+    padding: 12px;          /* less padding */
+  }
+
+  #task-input {
+    font-size: 13px;
+    padding: 6px;
+  }
+
+  #add-task {
+    padding: 6px 10px;
+    font-size: 16px;
+  }
+
+  .task-item {
+    padding: 6px 8px;
+  }
+
+  .task-checkbox {
+    transform: scale(1);    /* slightly smaller box */
+    margin-right: 6px;
+  }
+
+  .task-item span {
+    font-size: 13px;
+  }
+
+  .task-item button {
+    font-size: 16px;
+    margin-left: 6px;
+  }
+}
+
 
